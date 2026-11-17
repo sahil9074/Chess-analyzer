@@ -1,0 +1,71 @@
+{
+  "hung_piece": [
+    {"title": "How to Stop Blundering Pieces in 1 Move (chess.com blog)", "url": "https://www.chess.com/blog/Gertsog/how-to-stop-blundering-pieces-in-1-move", "kind": "article"},
+    {"title": "The \"Oops!\" Theory: 3 Rules to Curb Your Blundering Habits", "url": "https://www.chess.com/blog/GM_Dude_Chess/the-oops-theory-3-rules-to-curb-your-blundering-habits", "kind": "article"},
+    {"title": "How Do You Stop Blundering? (Lichess blog)", "url": "https://lichess.org/@/CheckRaiseMate/blog/how-do-you-stop-blundering/UOFOoIir", "kind": "article"},
+    {"title": "Lichess puzzles: Hanging Piece theme", "url": "https://lichess.org/training/hangingPiece", "kind": "drill"}
+  ],
+  "missed_capture": [
+    {"title": "Lichess puzzles: Hanging Piece theme", "url": "https://lichess.org/training/hangingPiece", "kind": "drill"},
+    {"title": "Lichess puzzles: all themes", "url": "https://lichess.org/training/themes", "kind": "drill"},
+    {"title": "Lichess Practice: Capturing and defending", "url": "https://lichess.org/practice", "kind": "drill"}
+  ],
+  "missed_mate": [
+    {"title": "Lichess Practice: Checkmate patterns & piece checkmates", "url": "https://lichess.org/practice", "kind": "drill"},
+    {"title": "Lichess puzzles: Mate in 1", "url": "https://lichess.org/training/mateIn1", "kind": "drill"},
+    {"title": "Lichess puzzles: Mate in 2", "url": "https://lichess.org/training/mateIn2", "kind": "drill"}
+  ],
+  "allowed_mate": [
+    {"title": "Lichess puzzles: Back rank mate", "url": "https://lichess.org/training/backRankMate", "kind": "drill"},
+    {"title": "Before every move: 'what can my opponent do to me?' checklist", "url": "https://www.chess.com/blog/EarendilStarBearer/simple-checklist-for-beginners", "kind": "article"}
+  ],
+  "missed_tactic": [
+    {"title": "Lichess puzzles: Fork", "url": "https://lichess.org/training/fork", "kind": "drill"},
+    {"title": "Lichess puzzles: Pin", "url": "https://lichess.org/training/pin", "kind": "drill"},
+    {"title": "Lichess puzzles: Skewer", "url": "https://lichess.org/training/skewer", "kind": "drill"},
+    {"title": "Lichess Practice: Fork, Pin, Skewer, Discovered attack", "url": "https://lichess.org/practice", "kind": "drill"}
+  ],
+  "tactical_oversight": [
+    {"title": "Lichess puzzles: all themes", "url": "https://lichess.org/training/themes", "kind": "drill"},
+    {"title": "chess.com Lessons", "url": "https://www.chess.com/lessons", "kind": "course"}
+  ],
+  "positional": [
+    {"title": "Beginner opening principles: Best chess openings for beginners (chess.com)", "url": "https://www.chess.com/article/view/the-best-chess-openings-for-beginners", "kind": "article"},
+    {"title": "chess.com Lessons", "url": "https://www.chess.com/lessons", "kind": "course"}
+  ],
+  "time_trouble": [
+    {"title": "The Art of Time Management (chess.com)", "url": "https://www.chess.com/article/view/the-art-of-time-management", "kind": "article"},
+    {"title": "Time is a resource, use it (Lichess blog)", "url": "https://lichess.org/@/tpr/blog/time-is-a-resource-use-it/sPHvUHJz", "kind": "article"},
+    {"title": "Blitz Domination: 5 tips to improve at blitz (Lichess blog)", "url": "https://lichess.org/@/NikolaN98/blog/blitz-domination-5-tips-to-improve-at-blitz/GDi9RPXf", "kind": "article"}
+  ],
+  "conversion": [
+    {"title": "The Chess Endgame Every Beginner Should Know (chess.com)", "url": "https://www.chess.com/article/view/the-chess-endgame-every-beginner-should-know", "kind": "article"},
+    {"title": "Lichess Practice: Piece checkmates (finish the game cleanly)", "url": "https://lichess.org/practice", "kind": "drill"}
+  ],
+  "opening": [
+    {"title": "Best Chess Openings for Beginners (chess.com)", "url": "https://www.chess.com/article/view/the-best-chess-openings-for-beginners", "kind": "article"},
+    {"title": "Lichess opening explorer", "url": "https://lichess.org/opening", "kind": "tool"}
+  ],
+  "endgame": [
+    {"title": "10 Endgame Principles for Beginners (chess.com)", "url": "https://www.chess.com/article/view/chess-endgames", "kind": "article"},
+    {"title": "Most important endgame principles for beginners (IM Ostrovskiy, Lichess video)", "url": "https://lichess.org/video/w4h8NyziiyE", "kind": "video"},
+    {"title": "Square of the pawn explained (IM Ostrovskiy, Lichess video)", "url": "https://lichess.org/video/XLOzK5gnjwI", "kind": "video"},
+    {"title": "Lichess Practice: pawn endgames, opposition, key squares", "url": "https://lichess.org/practice", "kind": "drill"}
+  ],
+  "middlegame": [
+    {"title": "Lichess puzzles: Middlegame", "url": "https://lichess.org/training/middlegame", "kind": "drill"},
+    {"title": "chess.com Lessons", "url": "https://www.chess.com/lessons", "kind": "course"}
+  ],
+  "openings": {
+    "Caro-Kann Defense": [
+      {"title": "The Complete Beginner Guide to the Caro-Kann (chess.com blog)", "url": "https://www.chess.com/blog/NoahdeAlwis/the-complete-beginner-guide-to-the-caro-kann", "kind": "article"},
+      {"title": "Popular Caro-Kann studies on Lichess", "url": "https://lichess.org/study/topic/Caro-Kann/popular", "kind": "study"}
+    ],
+    "Italian Game": [
+      {"title": "Lichess opening page: Italian Game", "url": "https://lichess.org/opening/Italian_Game", "kind": "tool"}
+    ],
+    "London System": [
+      {"title": "Lichess opening page: London System", "url": "https://lichess.org/opening/London_System", "kind": "tool"}
+    ]
+  }
+}

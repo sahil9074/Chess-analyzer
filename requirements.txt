@@ -1,0 +1,4 @@
+chess
+fastapi
+uvicorn
+httpx
