@@ -19,8 +19,10 @@ ROOT = Path(__file__).resolve().parent.parent
 USERNAME = os.environ.get("CHESS_USER", "dirkfade")
 RESOURCES = json.loads((Path(__file__).parent / "resources.json").read_text())
 REPERTOIRE = json.loads((Path(__file__).parent / "repertoire.json").read_text())
-for _fam in ("Queens Gambit", "Indian Game", "Slav Defense"):
-    RESOURCES["openings"].setdefault(_fam, REPERTOIRE["resources"])
+_SECTION = {s["id"]: s for s in REPERTOIRE["sections"]}
+for _fam, _sec in (("Queens Gambit", "slav"), ("Indian Game", "slav"), ("Slav Defense", "slav"), ("Caro-Kann Defense", "caro"),
+                   ("London System", "london"), ("Italian Game", "italian"), ("Ruy Lopez", "italian")):
+    RESOURCES["openings"][_fam] = _SECTION[_sec]["resources"] + RESOURCES["openings"].get(_fam, [])
 
 app = FastAPI(title="Chess Analyzer")
 state = {

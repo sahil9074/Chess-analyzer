@@ -1,39 +1,398 @@
 {
-  "title": "Black vs 1.d4: the Slav family",
-  "summary": "Always answer 1.d4 with 1...d5, then play ...c6 (a Slav) or ...Bf5 first. This is the same idea as your Caro-Kann: support d5 with the c-pawn and get the light-squared bishop out before you close it in with ...e6.",
-  "evidence": [
+ "sections": [
+  {
+   "id": "caro",
+   "color": "black",
+   "badge": "Black vs 1.e4",
+   "title": "Caro-Kann: your main defence to 1.e4",
+   "summary": "Keep the Caro-Kann. Your games show where it leaks: the plain 2.Nf3 lines and the Advance. The plan stays the same in every line: ...c6, ...d5, bishop out to f5 (or g4) before ...e6, then castle.",
+   "evidence": [
+    "You have 76 Caro-Kann games: 31 wins, 2 draws, 43 losses.",
+    "2.Nf3 is your weakest spot: 7 wins and 14 losses in 21 games. After 2.d4 you went 7 wins, 2 draws, 14 losses in 23 games, and the Advance (3.e5) alone is 2 wins, 1 draw, 6 losses.",
+    "You are fine against 2.Nc3 (6 wins, 3 losses) and 2.Bc4 / 2.Qh5 (6 wins, 2 losses).",
+    "After 3.Nc3 you played 3...Nf6 in 5 games (2 wins, 3 losses). The main line is 3...dxe4."
+   ],
+   "rules": [
+    "Bishop to f5 or g4 before you play ...e6. Once ...e6 is in, the bishop is stuck behind the pawns.",
+    "After 3.Nc3 take the pawn: 3...dxe4, then ...Bf5.",
+    "Whatever White plays on move 2, still play 2...d5."
+   ],
+   "lines": [
+    {
+     "name": "Advance (3.e5)",
+     "when": "White plays 3.e5",
+     "moves": "1.e4 c6 2.d4 d5 3.e5 Bf5 4.Nf3 e6 5.Be2 c5 6.Be3 cxd4 7.Nxd4 Nc6",
+     "plan": [
+      "Bishop out first, then ...e6. Strike at the centre with ...c5.",
+      "Add ...Nge7 or ...Nd7, then castle."
+     ]
+    },
+    {
+     "name": "Exchange (3.exd5)",
+     "when": "White plays 3.exd5",
+     "moves": "1.e4 c6 2.d4 d5 3.exd5 cxd5 4.Bd3 Nc6 5.c3 Nf6 6.Bf4 Bg4",
+     "plan": [
+      "Symmetrical. Develop, pin the f3 knight with ...Bg4, then ...e6 and ...Bd6.",
+      "Watch the queen check on b3."
+     ]
+    },
+    {
+     "name": "Classical (3.Nc3)",
+     "when": "White plays 3.Nc3",
+     "moves": "1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Bf5 5.Ng3 Bg6 6.h4 h6 7.Nf3 Nd7",
+     "plan": [
+      "Take on e4, get the bishop out before ...e6, and answer h4 with ...h6.",
+      "Next: ...e6, ...Ngf6, ...Bd6, castle."
+     ]
+    },
+    {
+     "name": "Two Knights (2.Nf3)",
+     "when": "White plays 2.Nf3",
+     "moves": "1.e4 c6 2.Nf3 d5 3.e5 Bf5 4.d4 e6",
+     "plan": [
+      "After 3.e5 you transpose into the Advance line above.",
+      "If White plays 3.exd5 cxd5, develop with ...Nc6, ...Nf6, ...Bg4, then ...e6 and ...Bd6."
+     ]
+    },
+    {
+     "name": "Other 2nd moves",
+     "when": "2.Nc3, 2.Bc4, 2.Qf3 or 2.Qh5",
+     "moves": "1.e4 c6 2.Nc3 d5 3.Nf3 Bg4 4.h3 Bh5",
+     "plan": [
+      "Same plan: ...d5, bishop out, ...e6, castle.",
+      "Against an early queen, simply develop and trade when you can."
+     ]
+    }
+   ],
+   "watch": [
+    "Do not play ...e6 before the bishop is out against 3.e5. The h4 and g4 ideas can then trap or chase the bishop.",
+    "If White attacks ...Bf5 with g4, step back with ...Bg6."
+   ],
+   "resources": [
+    {
+     "title": "The Complete Beginner Guide to the Caro-Kann (chess.com blog)",
+     "url": "https://www.chess.com/blog/NoahdeAlwis/the-complete-beginner-guide-to-the-caro-kann",
+     "kind": "article"
+    },
+    {
+     "title": "Beginner Lesson: Caro-Kann Defense (chess.com blog)",
+     "url": "https://www.chess.com/blog/Viznik/beginner-lesson-carro-kann-defense",
+     "kind": "article"
+    },
+    {
+     "title": "Kt Maneuvers Against the Advance Caro-Kann (chess.com)",
+     "url": "https://www.chess.com/article/view/kt-maneuvers-against-the-advance-caro-kann",
+     "kind": "article"
+    },
+    {
+     "title": "Caro-Kann Advance Variation (Lichess opening explorer)",
+     "url": "https://lichess.org/opening/Caro-Kann_Defense_Advance_Variation",
+     "kind": "tool"
+    },
+    {
+     "title": "Caro-Kann Exchange Variation (Lichess opening explorer)",
+     "url": "https://lichess.org/opening/Caro-Kann_Defense_Exchange_Variation",
+     "kind": "tool"
+    },
+    {
+     "title": "Popular Caro-Kann studies on Lichess",
+     "url": "https://lichess.org/study/topic/Caro-Kann/popular",
+     "kind": "study"
+    }
+   ]
+  },
+  {
+   "id": "london",
+   "color": "white",
+   "badge": "White vs 1.d4",
+   "title": "London System: your main opening as White",
+   "summary": "Keep the London. You play 1.d4 in 127 of your 133 White games. The setup is always the same: Bishop to f4 first, then e3, Nf3, c3, Bd3, Nbd2 and castle. The work is knowing what to do against Black's most common answers.",
+   "evidence": [
+    "As White with 1.d4 you have 50 wins, 5 draws and 72 losses in 127 games.",
+    "When Black copies your bishop with ...Bf5 after 2.Bf4, you went 0 wins and 3 losses.",
+    "When you started with 2.Nf3 and Black replied ...Nc6, you went 2 wins and 5 losses. Playing 2.Bf4 first and meeting ...Nc6 with 3.e3 went 6 wins and 6 losses.",
+    "Your London games average 88.7% accuracy (13 analysed games), against 85.7% in your other White games, so the setup itself is working."
+   ],
+   "rules": [
+    "Play the bishop to f4 before you play e3. The e3 pawn would close its diagonal.",
+    "Support d4 with c3 and e3, and put your knight on d2 to cover e4.",
+    "Do not leave b2 loose after Bf4: watch for ...Qb6."
+   ],
+   "lines": [
+    {
+     "name": "Main setup",
+     "when": "Black plays ...Nf6 and ...e6",
+     "moves": "1.d4 d5 2.Bf4 Nf6 3.e3 e6 4.Nf3 Bd6 5.Bg3 O-O 6.Nbd2 c5 7.c3 Nc6 8.Bd3",
+     "plan": [
+      "Trade your bishop for Black's dark-square bishop with Bg3 and Bxd6 if allowed.",
+      "Castle, then play for e4 or Ne5."
+     ]
+    },
+    {
+     "name": "Versus ...c5",
+     "when": "Black attacks d4 with ...c5",
+     "moves": "1.d4 d5 2.Bf4 c5 3.e3 Nc6 4.c3 Qb6 5.Qb3",
+     "plan": [
+      "Support d4 with c3 right away. If Black plays ...Qb6, offer the queen trade with Qb3."
+     ]
+    },
+    {
+     "name": "Versus the bishop mirror",
+     "when": "Black plays 2...Bf5",
+     "moves": "1.d4 d5 2.Bf4 Bf5 3.e3 e6 4.Nf3 Nf6 5.Bd3 Bxd3 6.Qxd3 Bd6 7.Bxd6 Qxd6 8.O-O O-O",
+     "plan": [
+      "Equal position. Trade the bishops, castle, and play for ...c4 or Ne5 ideas.",
+      "You are 0 for 3 here, so the main goal is simply no blunders."
+     ]
+    },
+    {
+     "name": "Versus ...Nc6",
+     "when": "Black plays an early ...Nc6",
+     "moves": "1.d4 d5 2.Nf3 Nc6 3.c3 Nf6 4.Bf4 e6 5.e3 Bd6 6.Bg3",
+     "plan": [
+      "Black's knight hits d4, so c3 comes before the bishop move. Keep Bd3 or a3 ready for ...Nb4."
+     ]
+    },
+    {
+     "name": "Versus Indian setups",
+     "when": "Black plays ...Nf6 and ...g6",
+     "moves": "1.d4 Nf6 2.Nf3 g6 3.Bf4 Bg7 4.e3 O-O 5.Be2 d6 6.h3 Nbd7 7.O-O",
+     "plan": [
+      "Same development. Play h3 to give the bishop a retreat square, castle, then look for e4 or c4."
+     ]
+    }
+   ],
+   "watch": [
+    "So far your most common big mistake is leaving a piece capturable, not the opening itself. Check every move for loose pieces.",
+    "Do not play Ne5 unless it is supported."
+   ],
+   "resources": [
+    {
+     "title": "London System on chess.com openings",
+     "url": "https://www.chess.com/openings/London-System",
+     "kind": "tool"
+    },
+    {
+     "title": "London System on the Lichess opening explorer",
+     "url": "https://lichess.org/opening/London_System",
+     "kind": "tool"
+    },
+    {
+     "title": "The Ultimate Guide to the London System: Essential Theory",
+     "url": "https://chess-teacher.com/the-london-system-essential-theory/",
+     "kind": "article"
+    },
+    {
+     "title": "London System with the Wikibooks move tree (2.Bf4)",
+     "url": "https://en.wikibooks.org/wiki/Chess_Opening_Theory/1._d4/1...d5/2._Bf4",
+     "kind": "reference"
+    }
+   ]
+  },
+  {
+   "id": "italian",
+   "color": "white",
+   "badge": "White vs ...e5 (new)",
+   "title": "Italian Game: a 1.e4 option for White",
+   "summary": "You asked about the Ruy Lopez. I would start with the Italian Game: the first three moves are the same (1.e4 e5 2.Nf3 Nc6), the plans are simpler, and there is far less to memorise. Add the Ruy later once the Italian feels easy.",
+   "evidence": [
+    "You have played 1.e4 as White only twice in 133 games, so this would be a brand-new opening for you, not a fix.",
+    "Several beginner guides recommend the Italian first and the Ruy Lopez later because the Ruy has more theory.",
+    "Keep the London as your main opening. Try the Italian as a second option and play 50 games before judging it."
+   ],
+   "rules": [
+    "Develop knights and bishop, castle by move 6, and play c3 and d3 for a slow, solid centre.",
+    "Avoid early queen moves. They lose time and let Black develop with tempo.",
+    "After castling, bring the b1 knight round via d2 to f1 or b3 and play d4 when ready."
+   ],
+   "lines": [
+    {
+     "name": "Giuoco Pianissimo (main)",
+     "when": "Black plays 3...Bc5",
+     "moves": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d3 d6 6.O-O O-O",
+     "plan": [
+      "Quiet development. Plan: Re1, Nbd2, and the d4 break once ready."
+     ]
+    },
+    {
+     "name": "Versus 3...Nf6",
+     "when": "Black plays the Two Knights",
+     "moves": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.d3 Bc5 5.c3 d6 6.O-O O-O",
+     "plan": [
+      "4.d3 keeps things calm and avoids the sharp 4.Ng5 lines."
+     ]
+    },
+    {
+     "name": "Versus ...d6 (Philidor)",
+     "when": "Black plays 2...d6",
+     "moves": "1.e4 e5 2.Nf3 d6 3.d4 exd4 4.Nxd4 Nf6 5.Nc3 Be7",
+     "plan": [
+      "Open the centre. Develop and castle."
+     ]
+    },
+    {
+     "name": "Versus the Petrov",
+     "when": "Black plays 2...Nf6",
+     "moves": "1.e4 e5 2.Nf3 Nf6 3.Nxe5 d6 4.Nf3 Nxe4 5.d4 d5 6.Bd3",
+     "plan": [
+      "Take on e5, retreat to f3, then play d4 to win the centre."
+     ]
+    },
+    {
+     "name": "Versus 1...c5 / French / Scandinavian",
+     "when": "Black does not play 1...e5",
+     "moves": "1.e4 c5 2.c3 Nf6 3.e5 Nd5 4.d4 cxd4 5.Nf3",
+     "plan": [
+      "Against the French: 1.e4 e6 2.d4 d5 3.e5. Against 1...d5: 2.exd5 Qxd5 3.Nc3 Qa5 4.d4."
+     ]
+    },
+    {
+     "name": "Later upgrade: Ruy Lopez",
+     "when": "Same first moves, Bb5 instead of Bc4",
+     "moves": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 d6 8.c3 O-O",
+     "plan": [
+      "More pressure on Black but more theory: learn Morphy (3...a6), Berlin (3...Nf6) and the Exchange line one at a time."
+     ]
+    }
+   ],
+   "watch": [
+    "Against 3...Nf6, do not rush 4.Ng5 unless you know the Fried Liver lines.",
+    "Count attackers on e4 and f7 before every capture."
+   ],
+   "resources": [
+    {
+     "title": "The Italian Game for beginners (Exeter Chess Club)",
+     "url": "https://exeterchessclub.org.uk/node/737",
+     "kind": "article"
+    },
+    {
+     "title": "Openings you must know: Giuoco Piano (ChessKid)",
+     "url": "https://www.chesskid.com/learn/articles/openings-you-must-know---giuco-piano",
+     "kind": "article"
+    },
+    {
+     "title": "The very first openings to learn (chess.com blog)",
+     "url": "https://www.chess.com/blog/cigoL/the-very-first-openings-to-learn",
+     "kind": "article"
+    },
+    {
+     "title": "Italian Game on the Lichess opening explorer",
+     "url": "https://lichess.org/opening/Italian_Game",
+     "kind": "tool"
+    },
+    {
+     "title": "Giuoco Piano on the Lichess opening explorer",
+     "url": "https://lichess.org/opening/Italian_Game_Giuoco_Piano",
+     "kind": "tool"
+    },
+    {
+     "title": "Ruy Lopez on the Lichess opening explorer",
+     "url": "https://lichess.org/opening/Ruy_Lopez",
+     "kind": "tool"
+    }
+   ]
+  },
+  {
+   "id": "slav",
+   "color": "black",
+   "title": "Black vs 1.d4: the Slav family",
+   "badge": "Black vs 1.d4",
+   "summary": "Always answer 1.d4 with 1...d5, then play ...c6 (a Slav) or ...Bf5 first. This is the same idea as your Caro-Kann: support d5 with the c-pawn and get the light-squared bishop out before you close it in with ...e6.",
+   "evidence": [
     "Against 1.d4 you went 8 wins and 22 losses after 1...d5, and 0 wins and 6 losses after 1...Nf6. Stick to 1...d5.",
     "In 23 of those games you played ...e6 early. Those scored 6 wins and 17 losses, and the c8 bishop stayed locked behind the pawns.",
     "Your Caro-Kann already uses the c6 + d5 pawns and ...Bf5, so these lines are mostly the same moves you know."
-  ],
-  "rules": [
+   ],
+   "rules": [
     "Move the c8 bishop out (…Bf5) before you play …e6.",
     "Do not take on c4 and hold the pawn at all costs: win it back, develop, then castle.",
     "Do not bring your queen out early. If you are unsure, castle."
-  ],
-  "lines": [
-    {"name": "Slav: main line", "when": "White plays 2.c4", "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3 e6 7.Bxc4 Bb4 8.O-O O-O",
-     "plan": ["Take on c4, then ...Bf5 and ...e6 so the bishop is already outside.", "Develop with ...Bb4 or ...Nbd7, castle, then aim for ...c5 or ...e5."]},
-    {"name": "Slav: Exchange", "when": "White plays 4.cxd5", "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.cxd5 cxd5 5.Bf4 Bf5 6.e3 e6",
-     "plan": ["Symmetrical position. Copy White's development, keep the bishop outside, and watch for tactics on the c-file."]},
-    {"name": "Slav: quiet 4.e3", "when": "White plays 4.e3", "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.e3 Bf5 5.Nc3 e6",
-     "plan": ["Bishop first, then ...e6, ...Nbd7 and ...Bd6. Do not give up the c8 bishop for a knight."]},
-    {"name": "Versus the London", "when": "White plays 2.Bf4", "moves": "1.d4 d5 2.Bf4 Bf5 3.e3 e6 4.Nf3 Nf6 5.Bd3 Bxd3 6.Qxd3 Bd6 7.Bxd6 Qxd6",
-     "plan": ["Mirror White: same setup, equal trades, no weaknesses. You play the London position as Black.", "Later, when comfortable, try ...c5 and ...Nc6 to fight for the centre."]},
-    {"name": "Versus the Colle / 2.e3", "when": "White plays 2.e3 or 2.Nf3 with e3", "moves": "1.d4 d5 2.e3 Nf6 3.Nf3 Bf5 4.Bd3 Bxd3 5.Qxd3 e6 6.O-O Bd6",
-     "plan": ["Bishop out, trade it off for White's good bishop, then ...e6 and castle. You lost all 3 games with an early ...e6 here."]}
-  ],
-  "watch": [
+   ],
+   "lines": [
+    {
+     "name": "Slav: main line",
+     "when": "White plays 2.c4",
+     "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3 e6 7.Bxc4 Bb4 8.O-O O-O",
+     "plan": [
+      "Take on c4, then ...Bf5 and ...e6 so the bishop is already outside.",
+      "Develop with ...Bb4 or ...Nbd7, castle, then aim for ...c5 or ...e5."
+     ]
+    },
+    {
+     "name": "Slav: Exchange",
+     "when": "White plays 4.cxd5",
+     "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.cxd5 cxd5 5.Bf4 Bf5 6.e3 e6",
+     "plan": [
+      "Symmetrical position. Copy White's development, keep the bishop outside, and watch for tactics on the c-file."
+     ]
+    },
+    {
+     "name": "Slav: quiet 4.e3",
+     "when": "White plays 4.e3",
+     "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.e3 Bf5 5.Nc3 e6",
+     "plan": [
+      "Bishop first, then ...e6, ...Nbd7 and ...Bd6. Do not give up the c8 bishop for a knight."
+     ]
+    },
+    {
+     "name": "Versus the London",
+     "when": "White plays 2.Bf4",
+     "moves": "1.d4 d5 2.Bf4 Bf5 3.e3 e6 4.Nf3 Nf6 5.Bd3 Bxd3 6.Qxd3 Bd6 7.Bxd6 Qxd6",
+     "plan": [
+      "Mirror White: same setup, equal trades, no weaknesses. You play the London position as Black.",
+      "Later, when comfortable, try ...c5 and ...Nc6 to fight for the centre."
+     ]
+    },
+    {
+     "name": "Versus the Colle / 2.e3",
+     "when": "White plays 2.e3 or 2.Nf3 with e3",
+     "moves": "1.d4 d5 2.e3 Nf6 3.Nf3 Bf5 4.Bd3 Bxd3 5.Qxd3 e6 6.O-O Bd6",
+     "plan": [
+      "Bishop out, trade it off for White's good bishop, then ...e6 and castle. You lost all 3 games with an early ...e6 here."
+     ]
+    }
+   ],
+   "watch": [
     "If White plays 2.Nc3 or 2.Bg5, still play ...Nf6 and ...c6 or ...e6 only after the bishop is out.",
     "After ...dxc4, do not try to keep the extra pawn with ...b5. Develop and win the pawn back instead."
-  ],
-  "resources": [
-    {"title": "How to play the Slav Defense (chess.com blog)", "url": "https://www.chess.com/blog/ZanderVanHornRdrgz/how-to-play-the-slav-defense", "kind": "article"},
-    {"title": "Mastering the Slav Defense: a guide for club players (chess.com blog)", "url": "https://www.chess.com/blog/TVLAVIN/mastering-the-slav-defense-a-comprehensive-guide-for-club-players", "kind": "article"},
-    {"title": "Slav Defense on chess.com openings", "url": "https://www.chess.com/openings/Slav-Defense", "kind": "tool"},
-    {"title": "Slav Defense on the Lichess opening explorer", "url": "https://lichess.org/opening/Slav_Defense", "kind": "tool"},
-    {"title": "1.d4 Solid Repertoire: Queen's Gambit Declined (Lichess video)", "url": "https://lichess.org/video/RmZFcsDIwug", "kind": "video"},
-    {"title": "Beating the London System (Lichess blog)", "url": "https://lichess.org/@/CkickyCheck/blog/beating-the-london-system/9qw8qYFP", "kind": "article"},
-    {"title": "Which openings actually make sense for beginners? (chess.com blog)", "url": "https://www.chess.com/blog/mizant/which-openings-actually-make-sense-for-beginners", "kind": "article"}
-  ]
+   ],
+   "resources": [
+    {
+     "title": "How to play the Slav Defense (chess.com blog)",
+     "url": "https://www.chess.com/blog/ZanderVanHornRdrgz/how-to-play-the-slav-defense",
+     "kind": "article"
+    },
+    {
+     "title": "Mastering the Slav Defense: a guide for club players (chess.com blog)",
+     "url": "https://www.chess.com/blog/TVLAVIN/mastering-the-slav-defense-a-comprehensive-guide-for-club-players",
+     "kind": "article"
+    },
+    {
+     "title": "Slav Defense on chess.com openings",
+     "url": "https://www.chess.com/openings/Slav-Defense",
+     "kind": "tool"
+    },
+    {
+     "title": "Slav Defense on the Lichess opening explorer",
+     "url": "https://lichess.org/opening/Slav_Defense",
+     "kind": "tool"
+    },
+    {
+     "title": "1.d4 Solid Repertoire: Queen's Gambit Declined (Lichess video)",
+     "url": "https://lichess.org/video/RmZFcsDIwug",
+     "kind": "video"
+    },
+    {
+     "title": "Beating the London System (Lichess blog)",
+     "url": "https://lichess.org/@/CkickyCheck/blog/beating-the-london-system/9qw8qYFP",
+     "kind": "article"
+    },
+    {
+     "title": "Which openings actually make sense for beginners? (chess.com blog)",
+     "url": "https://www.chess.com/blog/mizant/which-openings-actually-make-sense-for-beginners",
+     "kind": "article"
+    }
+   ]
+  }
+ ]
 }

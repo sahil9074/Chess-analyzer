@@ -37,8 +37,10 @@ def build() -> str:
     snap = {"user": "dirkfade", "summary": summary, "games": st["n"], "analysed": st["a"] or 0,
             "resources": json.loads((Path(__file__).parent / "resources.json").read_text()),
             "repertoire": json.loads((Path(__file__).parent / "repertoire.json").read_text())}
-    for fam in ("Queens Gambit", "Indian Game", "Slav Defense"):
-        snap["resources"]["openings"].setdefault(fam, snap["repertoire"]["resources"])
+    sec = {x["id"]: x for x in snap["repertoire"]["sections"]}
+    for fam, sid in (("Queens Gambit", "slav"), ("Indian Game", "slav"), ("Slav Defense", "slav"), ("Caro-Kann Defense", "caro"),
+                     ("London System", "london"), ("Italian Game", "italian"), ("Ruy Lopez", "italian")):
+        snap["resources"]["openings"][fam] = sec[sid]["resources"] + snap["resources"]["openings"].get(fam, [])
     s = re.sub(r"<!doctype html>|<html[^>]*>|</?head>|<body>|</body>|</html>", "", s)
     s = re.sub(r'<meta charset="utf-8">\s*<meta name="viewport"[^>]*>', '<meta name="claude:viewport-fit-sides" content="cover">', s)
     # themes: tokens for explicit dark, guarded media query
