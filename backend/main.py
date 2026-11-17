@@ -18,6 +18,9 @@ from . import analyze, chesscom, db, engine, insights
 ROOT = Path(__file__).resolve().parent.parent
 USERNAME = os.environ.get("CHESS_USER", "dirkfade")
 RESOURCES = json.loads((Path(__file__).parent / "resources.json").read_text())
+REPERTOIRE = json.loads((Path(__file__).parent / "repertoire.json").read_text())
+for _fam in ("Queens Gambit", "Indian Game", "Slav Defense"):
+    RESOURCES["openings"].setdefault(_fam, REPERTOIRE["resources"])
 
 app = FastAPI(title="Chess Analyzer")
 state = {
@@ -77,6 +80,11 @@ def run_analysis(req: AnalyzeReq, bg: BackgroundTasks):
 
     bg.add_task(job)
     return state["analysis"]
+
+
+@app.get("/api/repertoire")
+def repertoire():
+    return REPERTOIRE
 
 
 @app.get("/api/summary")

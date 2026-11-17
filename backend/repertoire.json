@@ -1,0 +1,39 @@
+{
+  "title": "Black vs 1.d4: the Slav family",
+  "summary": "Always answer 1.d4 with 1...d5, then play ...c6 (a Slav) or ...Bf5 first. This is the same idea as your Caro-Kann: support d5 with the c-pawn and get the light-squared bishop out before you close it in with ...e6.",
+  "evidence": [
+    "Against 1.d4 you went 8 wins and 22 losses after 1...d5, and 0 wins and 6 losses after 1...Nf6. Stick to 1...d5.",
+    "In 23 of those games you played ...e6 early. Those scored 6 wins and 17 losses, and the c8 bishop stayed locked behind the pawns.",
+    "Your Caro-Kann already uses the c6 + d5 pawns and ...Bf5, so these lines are mostly the same moves you know."
+  ],
+  "rules": [
+    "Move the c8 bishop out (…Bf5) before you play …e6.",
+    "Do not take on c4 and hold the pawn at all costs: win it back, develop, then castle.",
+    "Do not bring your queen out early. If you are unsure, castle."
+  ],
+  "lines": [
+    {"name": "Slav: main line", "when": "White plays 2.c4", "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3 e6 7.Bxc4 Bb4 8.O-O O-O",
+     "plan": ["Take on c4, then ...Bf5 and ...e6 so the bishop is already outside.", "Develop with ...Bb4 or ...Nbd7, castle, then aim for ...c5 or ...e5."]},
+    {"name": "Slav: Exchange", "when": "White plays 4.cxd5", "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.cxd5 cxd5 5.Bf4 Bf5 6.e3 e6",
+     "plan": ["Symmetrical position. Copy White's development, keep the bishop outside, and watch for tactics on the c-file."]},
+    {"name": "Slav: quiet 4.e3", "when": "White plays 4.e3", "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.e3 Bf5 5.Nc3 e6",
+     "plan": ["Bishop first, then ...e6, ...Nbd7 and ...Bd6. Do not give up the c8 bishop for a knight."]},
+    {"name": "Versus the London", "when": "White plays 2.Bf4", "moves": "1.d4 d5 2.Bf4 Bf5 3.e3 e6 4.Nf3 Nf6 5.Bd3 Bxd3 6.Qxd3 Bd6 7.Bxd6 Qxd6",
+     "plan": ["Mirror White: same setup, equal trades, no weaknesses. You play the London position as Black.", "Later, when comfortable, try ...c5 and ...Nc6 to fight for the centre."]},
+    {"name": "Versus the Colle / 2.e3", "when": "White plays 2.e3 or 2.Nf3 with e3", "moves": "1.d4 d5 2.e3 Nf6 3.Nf3 Bf5 4.Bd3 Bxd3 5.Qxd3 e6 6.O-O Bd6",
+     "plan": ["Bishop out, trade it off for White's good bishop, then ...e6 and castle. You lost all 3 games with an early ...e6 here."]}
+  ],
+  "watch": [
+    "If White plays 2.Nc3 or 2.Bg5, still play ...Nf6 and ...c6 or ...e6 only after the bishop is out.",
+    "After ...dxc4, do not try to keep the extra pawn with ...b5. Develop and win the pawn back instead."
+  ],
+  "resources": [
+    {"title": "How to play the Slav Defense (chess.com blog)", "url": "https://www.chess.com/blog/ZanderVanHornRdrgz/how-to-play-the-slav-defense", "kind": "article"},
+    {"title": "Mastering the Slav Defense: a guide for club players (chess.com blog)", "url": "https://www.chess.com/blog/TVLAVIN/mastering-the-slav-defense-a-comprehensive-guide-for-club-players", "kind": "article"},
+    {"title": "Slav Defense on chess.com openings", "url": "https://www.chess.com/openings/Slav-Defense", "kind": "tool"},
+    {"title": "Slav Defense on the Lichess opening explorer", "url": "https://lichess.org/opening/Slav_Defense", "kind": "tool"},
+    {"title": "1.d4 Solid Repertoire: Queen's Gambit Declined (Lichess video)", "url": "https://lichess.org/video/RmZFcsDIwug", "kind": "video"},
+    {"title": "Beating the London System (Lichess blog)", "url": "https://lichess.org/@/CkickyCheck/blog/beating-the-london-system/9qw8qYFP", "kind": "article"},
+    {"title": "Which openings actually make sense for beginners? (chess.com blog)", "url": "https://www.chess.com/blog/mizant/which-openings-actually-make-sense-for-beginners", "kind": "article"}
+  ]
+}

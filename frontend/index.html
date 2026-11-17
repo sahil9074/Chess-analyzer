@@ -55,6 +55,7 @@ svg:not(.board) text{fill:var(--muted);font-size:11px}
   <div id="dash" hidden>
     <div class="card"><h2>Overview</h2><div class="kpis" id="kpis"></div></div>
     <div class="card"><h2>What to work on</h2><div id="recs"></div></div>
+    <div class="card" id="repCard"><h2 id="repTitle">Black repertoire</h2><div id="repBody"></div></div>
     <div class="grid">
       <div class="card"><h2>Rating over time</h2><div id="ratingChart"></div><div class="legend" id="ratingLegend"></div></div>
       <div class="card"><h2>Accuracy per game</h2><div id="accChart"></div></div>
@@ -130,7 +131,19 @@ async function loadResources(el,{tag,opening}){
   el.innerHTML=`<ul class="links">${d.curated.map(li).join('')}</ul><div class="muted" style="font-size:12px">Search the web:</div><ul class="links">${d.search_links.map(li).join('')}</ul>`;
 }
 
+async function renderRep(){
+  let r;try{r=await api('/api/repertoire')}catch(e){$('#repCard').hidden=true;return}
+  $('#repTitle').textContent=r.title;
+  const pgn=m=>'https://lichess.org/analysis/pgn/'+encodeURIComponent(m.replace(/\d+\./g,'').trim().replace(/\s+/g,'_'));
+  const li=a=>'<ul class="links">'+a.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>';
+  $('#repBody').innerHTML=`<p>${esc(r.summary)}</p><h3>Why</h3>${li(r.evidence)}<h3>Three rules</h3>${li(r.rules)}<h3>Lines</h3>`+
+   r.lines.map(l=>`<div style="margin:10px 0;padding:10px 12px;border:1px solid var(--line);border-radius:10px"><b>${esc(l.name)}</b> <span class="tag">${esc(l.when)}</span>
+     <div style="font-family:ui-monospace,Menlo,monospace;font-size:13px;margin:6px 0;overflow-wrap:anywhere">${esc(l.moves)}</div>${li(l.plan)}
+     <a href="${pgn(l.moves)}" target="_blank" rel="noopener">open on Lichess board</a></div>`).join('')+
+   `<h3>Watch out for</h3>${li(r.watch)}<h3>Study</h3><ul class="links">`+r.resources.map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a><span class="tag">${esc(x.kind)}</span></li>`).join('')+'</ul>';
+}
 async function render(){
+  renderRep();
   const s=await api('/api/summary'),o=s.overview;
   $('#empty').hidden=o.analysed_games>0;$('#dash').hidden=!o.analysed_games;
   if(!o.analysed_games)return;

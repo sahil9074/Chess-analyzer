@@ -12,6 +12,7 @@ STUB = r"""
 const SNAP=__SNAP__;
 const api=async p=>{
   if(p.startsWith('/api/summary'))return SNAP.summary;
+  if(p.startsWith('/api/repertoire'))return SNAP.repertoire;
   if(p.startsWith('/api/status'))return {user:SNAP.user,sync:{running:false},analysis:{running:false},games:SNAP.games,analysed:SNAP.analysed,stockfish:true};
   if(p.startsWith('/api/resources')){
     const u=new URLSearchParams(p.split('?')[1]),tag=u.get('tag')||'',op=u.get('opening')||'',R=SNAP.resources;
@@ -34,7 +35,10 @@ def build() -> str:
     summary = insights.summary()
     st = db.rows("SELECT COUNT(*) n, SUM(analyzed) a FROM games")[0]
     snap = {"user": "dirkfade", "summary": summary, "games": st["n"], "analysed": st["a"] or 0,
-            "resources": json.loads((Path(__file__).parent / "resources.json").read_text())}
+            "resources": json.loads((Path(__file__).parent / "resources.json").read_text()),
+            "repertoire": json.loads((Path(__file__).parent / "repertoire.json").read_text())}
+    for fam in ("Queens Gambit", "Indian Game", "Slav Defense"):
+        snap["resources"]["openings"].setdefault(fam, snap["repertoire"]["resources"])
     s = re.sub(r"<!doctype html>|<html[^>]*>|</?head>|<body>|</body>|</html>", "", s)
     s = re.sub(r'<meta charset="utf-8">\s*<meta name="viewport"[^>]*>', '<meta name="claude:viewport-fit-sides" content="cover">', s)
     # themes: tokens for explicit dark, guarded media query
