@@ -54,7 +54,8 @@ svg:not(.board) text{fill:var(--muted);font-size:11px}
 
   <div id="dash" hidden>
     <div class="card"><h2>Overview</h2><div class="kpis" id="kpis"></div></div>
-    <div class="card"><h2>What to work on</h2><div id="recs"></div></div>
+    <div class="card" id="priCard"><h2>Priority list</h2><div class="muted" id="priAsof" style="font-size:12px;margin-bottom:6px"></div><div id="priBody"></div></div>
+    <div class="card"><h2>What the data flags</h2><div id="recs"></div></div>
     <div class="card" id="repCard"><h2>Your openings</h2><div class="muted" style="font-size:12px;margin-bottom:6px">Tap an opening to open its plan. All lines are checked for legal moves; confirm them in the Lichess explorer before memorising.</div><div id="repBody"></div></div>
     <div class="grid">
       <div class="card"><h2>Rating over time</h2><div id="ratingChart"></div><div class="legend" id="ratingLegend"></div></div>
@@ -131,6 +132,16 @@ async function loadResources(el,{tag,opening}){
   el.innerHTML=`<ul class="links">${d.curated.map(li).join('')}</ul><div class="muted" style="font-size:12px">Search the web:</div><ul class="links">${d.search_links.map(li).join('')}</ul>`;
 }
 
+async function renderPri(){
+  let r;try{r=await api('/api/priorities')}catch(e){$('#priCard').hidden=true;return}
+  $('#priAsof').textContent='Based on '+r.asof+'.';
+  const li=a=>'<ul class="links">'+a.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>';
+  $('#priBody').innerHTML=r.items.map(it=>`<div style="display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line)">
+   <div style="flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600">${it.rank}</div>
+   <div style="min-width:0;flex:1"><b>${esc(it.title)}</b><h3>Why</h3>${li(it.why)}<h3>What to do</h3>${li(it.do)}
+   <div style="font-size:13px"><span class="tag" style="margin:0 6px 0 0">target</span>${esc(it.measure)}</div>
+   ${it.links.length?'<ul class="links">'+it.links.map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a></li>`).join('')+'</ul>':''}</div></div>`).join('');
+}
 async function renderRep(){
   let r;try{r=await api('/api/repertoire')}catch(e){$('#repCard').hidden=true;return}
   const pgn=m=>'https://lichess.org/analysis/pgn/'+encodeURIComponent(m.replace(/\d+\./g,'').trim().replace(/\s+/g,'_'));
@@ -144,7 +155,7 @@ async function renderRep(){
    `<h3>Watch out for</h3>${li(sec.watch)}<h3>Study</h3><ul class="links">`+sec.resources.map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a><span class="tag">${esc(x.kind)}</span></li>`).join('')+'</ul></details>').join('');
 }
 async function render(){
-  renderRep();
+  renderPri();renderRep();
   const s=await api('/api/summary'),o=s.overview;
   $('#empty').hidden=o.analysed_games>0;$('#dash').hidden=!o.analysed_games;
   if(!o.analysed_games)return;

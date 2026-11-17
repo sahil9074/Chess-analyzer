@@ -18,6 +18,7 @@ from . import analyze, chesscom, db, engine, insights
 ROOT = Path(__file__).resolve().parent.parent
 USERNAME = os.environ.get("CHESS_USER", "dirkfade")
 RESOURCES = json.loads((Path(__file__).parent / "resources.json").read_text())
+PRIORITIES = json.loads((Path(__file__).parent / "priorities.json").read_text())
 REPERTOIRE = json.loads((Path(__file__).parent / "repertoire.json").read_text())
 _SECTION = {s["id"]: s for s in REPERTOIRE["sections"]}
 for _fam, _sec in (("Queens Gambit", "slav"), ("Indian Game", "slav"), ("Slav Defense", "slav"), ("Caro-Kann Defense", "caro"),
@@ -82,6 +83,11 @@ def run_analysis(req: AnalyzeReq, bg: BackgroundTasks):
 
     bg.add_task(job)
     return state["analysis"]
+
+
+@app.get("/api/priorities")
+def priorities():
+    return PRIORITIES
 
 
 @app.get("/api/repertoire")

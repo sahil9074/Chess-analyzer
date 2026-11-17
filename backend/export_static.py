@@ -13,6 +13,7 @@ const SNAP=__SNAP__;
 const api=async p=>{
   if(p.startsWith('/api/summary'))return SNAP.summary;
   if(p.startsWith('/api/repertoire'))return SNAP.repertoire;
+  if(p.startsWith('/api/priorities'))return SNAP.priorities;
   if(p.startsWith('/api/status'))return {user:SNAP.user,sync:{running:false},analysis:{running:false},games:SNAP.games,analysed:SNAP.analysed,stockfish:true};
   if(p.startsWith('/api/resources')){
     const u=new URLSearchParams(p.split('?')[1]),tag=u.get('tag')||'',op=u.get('opening')||'',R=SNAP.resources;
@@ -36,7 +37,8 @@ def build() -> str:
     st = db.rows("SELECT COUNT(*) n, SUM(analyzed) a FROM games")[0]
     snap = {"user": "dirkfade", "summary": summary, "games": st["n"], "analysed": st["a"] or 0,
             "resources": json.loads((Path(__file__).parent / "resources.json").read_text()),
-            "repertoire": json.loads((Path(__file__).parent / "repertoire.json").read_text())}
+            "repertoire": json.loads((Path(__file__).parent / "repertoire.json").read_text()),
+            "priorities": json.loads((Path(__file__).parent / "priorities.json").read_text())}
     sec = {x["id"]: x for x in snap["repertoire"]["sections"]}
     for fam, sid in (("Queens Gambit", "slav"), ("Indian Game", "slav"), ("Slav Defense", "slav"), ("Caro-Kann Defense", "caro"),
                      ("London System", "london"), ("Italian Game", "italian"), ("Ruy Lopez", "italian")):
