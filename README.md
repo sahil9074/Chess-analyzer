@@ -20,3 +20,8 @@ Open http://localhost:8000, click **Sync**, then **Analyse** (start with 25 game
 - `backend/insights.py` – aggregates stats and writes the "what to work on" recommendations.
 - `backend/resources.json` – curated links per mistake type / opening; the dashboard also builds search links and
   has a live web search box (DuckDuckGo HTML endpoint, needs outbound access).
+
+## Included data
+`data/chess.db` is a snapshot of the analysed games (286 games for `dirkfade`, all graded), so the dashboard opens
+populated. Run **Sync** to pull newer games and **Analyse** to grade them; existing analysis is kept.
+Set `CHESS_USER` to analyse a different account (use a separate `CHESS_DATA_DIR` so the databases don't mix).

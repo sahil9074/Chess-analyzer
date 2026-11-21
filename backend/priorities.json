@@ -1,47 +1,121 @@
 {
- "asof": "66 analysed games of 269 (record counts use all 269)",
+ "asof": "all 286 games, fully analysed",
  "items": [
-  {"rank": 1, "title": "Stop leaving pieces and mates unprotected",
-   "why": ["Hung pieces, missed free captures and walking into mate are 101 of your 234 big mistakes, and each one costs 26 to 44 win-% (positional slips cost about 14).",
-           "Add the other tactical oversights and tactics are about two-thirds of everything that goes wrong."],
-   "do": ["Before every move ask three questions: what did their last move attack, is the square I'm moving to safe, and is anything of mine left undefended?",
-          "10 minutes a day of Lichess 'Hanging piece' and 'Mate in 1' puzzles until the check becomes automatic."],
-   "measure": "Blunders per game: 1.7 now, aim for under 1.",
-   "links": [{"title": "Lichess puzzles: Hanging Piece", "url": "https://lichess.org/training/hangingPiece"}, {"title": "How to Stop Blundering Pieces in 1 Move", "url": "https://www.chess.com/blog/Gertsog/how-to-stop-blundering-pieces-in-1-move"}]},
-  {"rank": 2, "title": "Slow down in the middlegame",
-   "why": ["You make 15.0 mistakes or blunders per 100 moves in the middlegame, against 6.4 in the opening and 7.6 in the endgame.",
-           "The middlegame holds 153 of your 234 big mistakes (79 mistakes and 74 blunders). The opening is not where you lose."],
-   "do": ["Spend your thinking time here, not in the first 8 moves. Play the opening moves from the repertoire quickly.",
-          "Each middlegame move: look for their checks, captures and threats first, then your plan."],
-   "measure": "Middlegame mistakes per 100 moves: 15.0 now, aim for under 10.",
-   "links": [{"title": "The Oops! Theory: 3 Rules to Curb Your Blundering Habits", "url": "https://www.chess.com/blog/GM_Dude_Chess/the-oops-theory-3-rules-to-curb-your-blundering-habits"}]},
-  {"rank": 3, "title": "Finish the games you are winning",
-   "why": ["You reached a clearly winning position (+3 or better) in 49 games and won only 29. That is 20 games thrown away.",
-           "53 of your 162 losses are on time, and in 6 of the 12 timeout losses analysed so far you were ahead."],
-   "do": ["When ahead, trade pieces and avoid new risks. Do not hunt for extra material.",
-          "Practise the basic checkmates (two rooks, queen and king, king and rook) so you can finish fast.",
-          "Check your clock at move 20 and again at move 30. If you are ahead and low on time, play the simplest safe move."],
-   "measure": "Win at least 80% of the games where you reach +3 (now 59%).",
-   "links": [{"title": "Lichess Practice: checkmates", "url": "https://lichess.org/practice"}, {"title": "The Chess Endgame Every Beginner Should Know", "url": "https://www.chess.com/article/view/the-chess-endgame-every-beginner-should-know"}]},
-  {"rank": 4, "title": "Play rapid for now, and cut blitz",
-   "why": ["Your blitz rating is about 325 and your rapid rating about 770.",
-           "30 of your 64 blitz losses (47%) are on time, against 23 of 98 rapid losses (23%)."],
-   "do": ["Make 10-minute rapid your main practice format while the blunder check becomes a habit.",
-          "In blitz, play the opening from memory and save your clock for the middlegame."],
-   "measure": "Timeout losses: 53 now. Aim for under 10% of your losses.",
-   "links": [{"title": "The Art of Time Management (chess.com)", "url": "https://www.chess.com/article/view/the-art-of-time-management"}, {"title": "Time is a resource, use it (Lichess blog)", "url": "https://lichess.org/@/tpr/blog/time-is-a-resource-use-it/sPHvUHJz"}]},
-  {"rank": 5, "title": "Learn the openings, in this order",
-   "why": ["Openings are the least costly problem, but three gaps are cheap to close: Black vs 1.d4 (8 wins, 22 losses), the Caro-Kann vs 2.Nf3 (7 wins, 14 losses) and the London vs the ...Bf5 mirror (0 wins, 3 losses)."],
-   "do": ["1. Learn the Slav setup against 1.d4 (2...c6, bishop out before ...e6).",
-          "2. Learn the Caro-Kann answers to 2.Nf3 and the Advance.",
-          "3. Keep the London as White. Try the Italian Game only after the first four priorities feel automatic."],
+  {
+   "rank": 1,
+   "title": "Stop leaving pieces and mates unprotected",
+   "why": [
+    "Hanging a piece, missing a free capture or walking into mate is 390 of your 1,019 big mistakes, and each one costs 27 to 45 win-% (a positional slip costs about 14).",
+    "Add the other missed tactics and tactical oversights and tactics are about 62% of everything that goes wrong."
+   ],
+   "do": [
+    "Before every move ask three questions: what did their last move attack, is the square I'm moving to safe, and is anything of mine left undefended?",
+    "10 minutes a day of Lichess 'Hanging piece' and 'Mate in 1' puzzles until the check becomes automatic."
+   ],
+   "measure": "Blunders per game: 1.67 now, aim for under 1.",
+   "links": [
+    {
+     "title": "Lichess puzzles: Hanging Piece",
+     "url": "https://lichess.org/training/hangingPiece"
+    },
+    {
+     "title": "How to Stop Blundering Pieces in 1 Move",
+     "url": "https://www.chess.com/blog/Gertsog/how-to-stop-blundering-pieces-in-1-move"
+    }
+   ]
+  },
+  {
+   "rank": 2,
+   "title": "Slow down in the middlegame",
+   "why": [
+    "You make 16.6 mistakes or blunders per 100 moves in the middlegame, against 6.9 in the opening and 9.2 in the endgame.",
+    "The middlegame holds 682 of your 1,019 big mistakes (352 mistakes and 330 blunders). The opening is not where you lose."
+   ],
+   "do": [
+    "Spend your thinking time here, not in the first 8 moves. Play the opening moves from the repertoire quickly.",
+    "Each middlegame move: look for their checks, captures and threats first, then your plan."
+   ],
+   "measure": "Middlegame mistakes per 100 moves: 16.6 now, aim for under 10.",
+   "links": [
+    {
+     "title": "The Oops! Theory: 3 Rules to Curb Your Blundering Habits",
+     "url": "https://www.chess.com/blog/GM_Dude_Chess/the-oops-theory-3-rules-to-curb-your-blundering-habits"
+    }
+   ]
+  },
+  {
+   "rank": 3,
+   "title": "Finish the games you are winning",
+   "why": [
+    "You reached a clearly winning position (+3 or better) in 183 games and won only 95. That is 88 games thrown away.",
+    "56 of your 172 losses are on time. In 16 of those 56 you were ahead on the board when it happened, and 30 were already lost."
+   ],
+   "do": [
+    "When ahead, trade pieces and avoid new risks. Do not hunt for extra material.",
+    "Practise the basic checkmates (two rooks, queen and king, king and rook) so you can finish fast.",
+    "Check your clock at move 20 and again at move 30. If you are ahead and low on time, play the simplest safe move."
+   ],
+   "measure": "Win at least 75% of the games where you reach +3 (now 52%).",
+   "links": [
+    {
+     "title": "Lichess Practice: checkmates",
+     "url": "https://lichess.org/practice"
+    },
+    {
+     "title": "The Chess Endgame Every Beginner Should Know",
+     "url": "https://www.chess.com/article/view/the-chess-endgame-every-beginner-should-know"
+    }
+   ]
+  },
+  {
+   "rank": 4,
+   "title": "Play rapid for now, and cut blitz",
+   "why": [
+    "Your blitz rating is about 313 and your rapid rating about 726.",
+    "31 of your 68 blitz losses (46%) are on time, against 25 of 104 rapid losses (24%). Low on the clock you make a big mistake on 16.4% of moves, against 11.8% otherwise."
+   ],
+   "do": [
+    "Make 10-minute rapid your main practice format while the blunder check becomes a habit.",
+    "In blitz, play the opening from memory and save your clock for the middlegame."
+   ],
+   "measure": "Timeout losses: 56 now. Aim for under 10% of your losses.",
+   "links": [
+    {
+     "title": "The Art of Time Management (chess.com)",
+     "url": "https://www.chess.com/article/view/the-art-of-time-management"
+    },
+    {
+     "title": "Time is a resource, use it (Lichess blog)",
+     "url": "https://lichess.org/@/tpr/blog/time-is-a-resource-use-it/sPHvUHJz"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "title": "Learn the openings, in this order",
+   "why": [
+    "Openings are the least costly problem, but three gaps are cheap to close: Black vs 1.d4 (9 wins, 23 losses), the Caro-Kann vs 2.Nf3 (7 wins, 15 losses) and the London vs the ...Bf5 mirror (0 wins, 3 losses)."
+   ],
+   "do": [
+    "1. Learn the Slav setup against 1.d4 (2...c6, bishop out before ...e6).",
+    "2. Learn the Caro-Kann answers to 2.Nf3 and the Advance.",
+    "3. Keep the London as White. Try the Italian Game only after the first four priorities feel automatic."
+   ],
    "measure": "Review the 'Your openings' section once a week. Spend no more than 15 minutes a day on openings.",
-   "links": []},
-  {"rank": 6, "title": "Review your biggest mistake after each loss",
-   "why": ["Your costliest blunders are shown on this page with the better move. Seeing the same patterns repeat is what builds the habit."],
-   "do": ["After a loss, find the one move where the game turned and say out loud what you missed.",
-          "Once a week, re-run this analysis and check the numbers above."],
+   "links": []
+  },
+  {
+   "rank": 6,
+   "title": "Review your biggest mistake after each loss",
+   "why": [
+    "Your costliest blunders are shown on this page with the better move. Seeing the same patterns repeat is what builds the habit."
+   ],
+   "do": [
+    "After a loss, find the one move where the game turned and say out loud what you missed.",
+    "Once a week, re-run this analysis and check the numbers above."
+   ],
    "measure": "Blunders per game, big mistakes per 100 moves, and timeout share of losses.",
-   "links": []}
+   "links": []
+  }
  ]
 }

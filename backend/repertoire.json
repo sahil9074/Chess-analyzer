@@ -7,10 +7,10 @@
    "title": "Caro-Kann: your main defence to 1.e4",
    "summary": "Keep the Caro-Kann. Your games show where it leaks: the plain 2.Nf3 lines and the Advance. The plan stays the same in every line: ...c6, ...d5, bishop out to f5 (or g4) before ...e6, then castle.",
    "evidence": [
-    "You have 76 Caro-Kann games: 31 wins, 2 draws, 43 losses.",
-    "2.Nf3 is your weakest spot: 7 wins and 14 losses in 21 games. After 2.d4 you went 7 wins, 2 draws, 14 losses in 23 games, and the Advance (3.e5) alone is 2 wins, 1 draw, 6 losses.",
-    "You are fine against 2.Nc3 (6 wins, 3 losses) and 2.Bc4 / 2.Qh5 (6 wins, 2 losses).",
-    "After 3.Nc3 you played 3...Nf6 in 5 games (2 wins, 3 losses). The main line is 3...dxe4."
+    "You have 83 Caro-Kann games: 33 wins, 3 draws, 47 losses.",
+    "2.Nf3 is your weakest spot: 7 wins and 15 losses in 22 games. After 2.d4 you went 8 wins, 2 draws, 15 losses in 25 games, and the Advance (3.e5) alone is 3 wins, 1 draw, 6 losses.",
+    "You are fine against 2.Nc3 (6 wins, 3 losses) and 2.Bc4 / 2.Qh5 (7 wins, 4 losses).",
+    "After 3.Nc3 you played 3...Nf6 in 6 games (2 wins, 4 losses) and 3...dxe4 only once. The main line is 3...dxe4."
    ],
    "rules": [
     "Bishop to f5 or g4 before you play ...e6. Once ...e6 is in, the bishop is stuck behind the pawns.",
@@ -106,12 +106,12 @@
    "color": "white",
    "badge": "White vs 1.d4",
    "title": "London System: your main opening as White",
-   "summary": "Keep the London. You play 1.d4 in 127 of your 133 White games. The setup is always the same: Bishop to f4 first, then e3, Nf3, c3, Bd3, Nbd2 and castle. The work is knowing what to do against Black's most common answers.",
+   "summary": "Keep the London. You play 1.d4 in 134 of your 141 White games. The setup is always the same: Bishop to f4 first, then e3, Nf3, c3, Bd3, Nbd2 and castle. The work is knowing what to do against Black's most common answers.",
    "evidence": [
-    "As White with 1.d4 you have 50 wins, 5 draws and 72 losses in 127 games.",
-    "When Black copies your bishop with ...Bf5 after 2.Bf4, you went 0 wins and 3 losses.",
-    "When you started with 2.Nf3 and Black replied ...Nc6, you went 2 wins and 5 losses. Playing 2.Bf4 first and meeting ...Nc6 with 3.e3 went 6 wins and 6 losses.",
-    "Your London games average 88.7% accuracy (13 analysed games), against 85.7% in your other White games, so the setup itself is working."
+    "As White with 1.d4 you have 51 wins, 6 draws and 77 losses in 134 games.",
+    "When Black copies your bishop with ...Bf5 after 2.Bf4, you went 0 wins, 1 draw and 3 losses.",
+    "When you started with 2.Nf3 and Black replied ...Nc6, you went 2 wins and 5 losses. Playing 2.Bf4 first and meeting ...Nc6 with 3.e3 went 6 wins and 7 losses.",
+    "Your accuracy is about the same in London games (87.3%) and your other White games (87.0%), so the setup is not the weak point. The mistakes come from loose pieces and missed tactics."
    ],
    "rules": [
     "Play the bishop to f4 before you play e3. The e3 pawn would close its diagonal.",
@@ -142,7 +142,7 @@
      "moves": "1.d4 d5 2.Bf4 Bf5 3.e3 e6 4.Nf3 Nf6 5.Bd3 Bxd3 6.Qxd3 Bd6 7.Bxd6 Qxd6 8.O-O O-O",
      "plan": [
       "Equal position. Trade the bishops, castle, and play for ...c4 or Ne5 ideas.",
-      "You are 0 for 3 here, so the main goal is simply no blunders."
+      "You have no wins in 4 games here, so the main goal is simply no blunders."
      ]
     },
     {
@@ -196,7 +196,7 @@
    "title": "Italian Game: a 1.e4 option for White",
    "summary": "You asked about the Ruy Lopez. I would start with the Italian Game: the first three moves are the same (1.e4 e5 2.Nf3 Nc6), the plans are simpler, and there is far less to memorise. Add the Ruy later once the Italian feels easy.",
    "evidence": [
-    "You have played 1.e4 as White only twice in 133 games, so this would be a brand-new opening for you, not a fix.",
+    "You have played 1.e4 as White only twice in 141 games, so this would be a brand-new opening for you, not a fix.",
     "Several beginner guides recommend the Italian first and the Ruy Lopez later because the Ruy has more theory.",
     "Keep the London as your main opening. Try the Italian as a second option and play 50 games before judging it."
    ],
@@ -299,8 +299,8 @@
    "badge": "Black vs 1.d4",
    "summary": "Always answer 1.d4 with 1...d5, then play ...c6 (a Slav) or ...Bf5 first. This is the same idea as your Caro-Kann: support d5 with the c-pawn and get the light-squared bishop out before you close it in with ...e6.",
    "evidence": [
-    "Against 1.d4 you went 8 wins and 22 losses after 1...d5, and 0 wins and 6 losses after 1...Nf6. Stick to 1...d5.",
-    "In 23 of those games you played ...e6 early. Those scored 6 wins and 17 losses, and the c8 bishop stayed locked behind the pawns.",
+    "Against 1.d4 you went 9 wins and 23 losses after 1...d5, and 0 wins and 6 losses after 1...Nf6. Stick to 1...d5.",
+    "In 24 of those games you played ...e6 early. Those scored 7 wins and 17 losses, and the c8 bishop stayed locked behind the pawns.",
     "Your Caro-Kann already uses the c6 + d5 pawns and ...Bf5, so these lines are mostly the same moves you know."
    ],
    "rules": [
